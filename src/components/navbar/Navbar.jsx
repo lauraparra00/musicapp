@@ -13,7 +13,7 @@ function Navbar() {
      
           <button>Home</button>
           <button>Create</button>
-          
+          <button>registration</button>
         {/* <Link to="/"><li className='navButton'>Home</li></Link>  
         <Link to="/covers"><li className='navButton'>Create</li></Link> */}
       

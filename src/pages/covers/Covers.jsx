@@ -7,7 +7,6 @@ function Covers() {
       <>
       <Navbar/>
     <h1>Covers</h1>
-    <h1></h1>
       <Card/>
     </>
   )
