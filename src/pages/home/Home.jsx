@@ -1,5 +1,6 @@
 import React from 'react'
-import Card from '../../components/card/Card'
+
+import { CardList } from '../../components/CardList/CardList'
 import Navbar from '../../components/navbar/Navbar'
 
 function Home() {
@@ -8,7 +9,8 @@ function Home() {
     <Navbar/>
 
     <div>Home</div>
-    <Card/>
+   
+    <CardList/>
     </>
   )
 }

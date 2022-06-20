@@ -1,9 +1,18 @@
 import React from 'react'
+import { Header, Logo, Logoh1, Nav, NavButton } from './Navbar.styled'
 // import { Link, NavLink } from 'react-router-dom'
 
 function Navbar() {
   return (
-    <div className="header">
+
+    <Header>
+    <Logo>
+      <Logoh1></Logoh1>
+    </Logo>
+    <Nav>
+      <NavButton></NavButton>
+
+    </Nav>
       <div className="logo">
        
           <h1>logo</h1>
@@ -26,7 +35,8 @@ function Navbar() {
        
         </div>
        
-    </div>
+    </Header>
+    
   )
 }
 
