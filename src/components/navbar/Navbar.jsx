@@ -1,8 +1,9 @@
 import React from 'react'
 import { Header, Logo, Logoh1, Nav, NavButton } from './Navbar.styled'
-// import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Form from '../../components/form/Form'
 
-function Navbar() {
+export const Navbar = () => {
   return (
 
     <Header>
@@ -20,9 +21,10 @@ function Navbar() {
       </div>
       <div className="nav">
      
-          <button>Home</button>
-          <button>Create</button>
-          <button>registration</button>
+
+        <Link to= "/"><button>Home</button></Link>
+        <Link to= "/Form"> <button>Create</button> </Link> 
+        <Link to= "/Register"> <button>Register</button> </Link>
         {/* <Link to="/"><li className='navButton'>Home</li></Link>  
         <Link to="/covers"><li className='navButton'>Create</li></Link> */}
       
@@ -40,4 +42,3 @@ function Navbar() {
   )
 }
 
-export default Navbar

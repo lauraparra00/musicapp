@@ -13,11 +13,14 @@ export const Header = styled.div`
 export const Logo = styled.div`
     width: 20%;
     margin-left: 5%;
-
-`;
+    align-items: flex-start;
+  
+    `;
 export const Logoh1 = styled.h1`
     margin: 0;
-
+    display: flex;
+    
+   
 `;
 
 export const Nav = styled.div`

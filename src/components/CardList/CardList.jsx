@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { momentsServices } from "../../momentsServices";
-import Card from "../card/Card";
+import { momentsServices } from "../../services/momentsServices";
+import {Card} from "../card/Card";
 import {ContainerList} from "./CardList.styled";
 
 export const CardList = ()=> {
@@ -11,10 +11,10 @@ export const CardList = ()=> {
     },[]);
     const getAllMoments = ()=>{momentsServices.getAllMoments().then((res)=>{setMoments(res);})}
     return (
-    <ContainerList>   
+     <ContainerList>
        {moments.map((moment, key)=>(<Card moment= {moment}key ={key}/>))}
      
+       </ContainerList>
        
-    </ContainerList>
     );
 }

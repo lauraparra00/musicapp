@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./card.css";
 import { CardContainer, CardIcons, CardText, DeleteButton, Description, EditButton, EyeButton, ImageCard, ImageCardImage, Title } from "./Card.styled";
 
-function Card(props) {
+export const Card = (props) => {
   const [moment, setMoment]= useState (props.moment);
   useEffect(()=>{setMoment(props.moment)},[props.moment])
   return (
@@ -14,8 +14,8 @@ function Card(props) {
     <ImageCardImage src = {moment.img}/>
     </ImageCard>
     <CardText>
-        <Title>Totxo Macana</Title>
-        <Description>Primera Via 7c+/8a regraduada a 7c Sessió Continua-Montserrat/Description</Description>
+        <Title>Eiger North Face</Title>
+        <Description>Mountain of 3970 m high in the Bernese Alps of Switzerland</Description>
     </CardText>
     <CardIcons>
         <EditButton> <i className="fa-solid fa-pen-to-square"></i></EditButton> 
@@ -54,4 +54,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+
