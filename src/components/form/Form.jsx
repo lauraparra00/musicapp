@@ -4,25 +4,75 @@ import { useState } from 'react';
 
 
 export const MyForm = () => {
-  const [name, setName] = useState("");
+  const [name , setName] = useState('');
+  const [email , setEmail] = useState('');
+  const [password , setPassword] = useState('');
+  const [confPassword , setConfPassword] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(`The name you entered was: ${name}`)
+ 
+  const handleChange =(e)=>{
+    setName(e.target.value);
   }
+ 
+  const handleEmailChange =(e)=>{
+    setEmail(e.target.value);
+  }
+    
+  const handlePasswordChange =(e)=>{
+    setPassword(e.target.value);
+  }
+    
+  const handleConfPasswordChange =(e)=>{
+    setConfPassword(e.target.value);
+  }
+  
+  const handleSubmit=(e)=>{
+    if(password!=confPassword)
+    {
+      
+      alert("La contrasenya no coinsideix");
+    }
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <label>Enter your name:
-        <input 
-          type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-      <input type="submit" />
+    else{
+      alert(`Formulari enviat com a :"${name}"`);
+    }
+
+    e.preventDefault();
+
+  }
+return (
+  <div className="App">
+  <header className="App-header">
+  <form onSubmit={(e) => {handleSubmit(e)}}>
+
+  
+  <h3> Registrar-se </h3>
+      <label >
+        Nom:
+      </label><br/>
+      <input type="text" value={name} required onChange={function (e) { handleChange(e); }} /><br/>
+         
+      <label>
+        Email:
+      </label><br/>
+      <input type="email" value={email} required onChange={function (e) { handleEmailChange(e); }} /><br/>
+        
+      <label>
+        Contrasenya:
+      </label><br/>
+      <input type="password" value={password} required onChange={function (e) { handlePasswordChange(e); }} /><br/>
+           
+      <label>
+        Confirmar Contrasenya:
+      </label><br/>
+      <input type="password" value={confPassword} required onChange={function (e) { handleConfPasswordChange(e); }} /><br/>
+            
+      <input type="submit" value="Submit"/>
     </form>
-  )
+  </header>
+  </div>
+);
 }
+
 
 
