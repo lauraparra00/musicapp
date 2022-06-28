@@ -11,11 +11,11 @@ export const Card = (props) => {
   
     <CardContainer>
     <ImageCard>
-    <ImageCardImage src = {moment.img}/>
+    <ImageCardImage src = {moment.url}/>
     </ImageCard>
     <CardText>
-        <Title>Eiger North Face</Title>
-        <Description>Mountain of 3970 m high in the Bernese Alps of Switzerland</Description>
+        <Title> {moment.title}</Title>
+        <Description> {moment.description}</Description>
     </CardText>
     <CardIcons>
         <EditButton> <i className="fa-solid fa-pen-to-square"></i></EditButton> 

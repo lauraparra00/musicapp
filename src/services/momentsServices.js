@@ -1,11 +1,11 @@
 
 import axios from "axios";
-const baseUrl = "https://6286ac987864d2883e7842af.mockapi.io";
+const baseUrl = "http://localhost:8080";
 
 export const momentsServices = {
     getAllMoments () {
 
-        const moments = axios.get(baseUrl + "/moments").then((res)=>res.data);
+        const moments = axios.get(baseUrl + "/climbers").then((res)=>res.data);
         return moments;
     }
 }
