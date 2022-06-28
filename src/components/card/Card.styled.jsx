@@ -17,12 +17,14 @@ export const ImageCard = styled.div`
 
 
 export const CardText = styled.div`
-   width: 80%;  
+   width: 80%; 
+   
 
 `;
 
 export const Title = styled.h2`
   font-family: 'Cinzel', serif;  
+  font-weight: 900;
 
 `;
 
@@ -38,27 +40,36 @@ export const ImageCardImage = styled.img`
 `;
 
 export const CardIcons = styled.div`
-    width:  20%;
-    display: flex;
-
+   text-align: center;
+   width:  20%;
+   display: flex;
 `;
 
 export const EditButton = styled.button`
-    background-color: #a600ff;
-    width: 25px;
-    height: 25px;
-
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    
 `;
 
 export const DeleteButton = styled.button`
-    background-color: #23db76;
-    width: 25px;
-    height: 25px;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
     
 `;
 
 export const EyeButton = styled.button`
-    background-color: #802388;
-    width: 25px;
-    height: 25px;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer; 
 `;

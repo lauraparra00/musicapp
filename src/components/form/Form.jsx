@@ -5,11 +5,16 @@ import { useState } from 'react';
 
 export const MyForm = () => {
   const [name, setName] = useState("");
-
-  const handleSubmit = (event) => {
+  
+  const handleSubmit = (event) => {      
     event.preventDefault();
     alert(`The name you entered was: ${name}`)
+  
+
+  
+
   }
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -22,7 +27,8 @@ export const MyForm = () => {
       </label>
       <input type="submit" />
     </form>
+
+
   )
 }
-
 
