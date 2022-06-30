@@ -4,9 +4,11 @@ import { useState } from "react";
 import "./card.css";
 import { CardContainer, CardIcons, CardText, DeleteButton, Description, EditButton, EyeButton, ImageCard, ImageCardImage, Title } from "./Card.styled";
 
-export const Card = (props) => {
-  const [moment, setMoment]= useState (props.moment);
-  useEffect(()=>{setMoment(props.moment)},[props.moment])
+export function Card  ({moment, deleteMoment})  {
+
+
+
+ 
   return (
   
     <CardContainer>
@@ -19,7 +21,7 @@ export const Card = (props) => {
     </CardText>
     <CardIcons>
         <EditButton> <i className="fa-solid fa-pen-to-square"></i></EditButton> 
-        <DeleteButton> <i className="fa-solid fa-trash"></i></DeleteButton>
+        <DeleteButton onClick = { () =>deleteMoment(moment.id) }><i className="fa-solid fa-trash"></i></DeleteButton>
         <EyeButton> <i className="fa-solid fa-eye"></i> </EyeButton>
     </CardIcons>
  {/*      <div className="image-card">

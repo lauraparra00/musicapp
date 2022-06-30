@@ -8,7 +8,7 @@ export const Home = () => {
     <>
     <Navbar/>
 
-    <div>Home</div>
+   
    
     <CardList/>
     </>

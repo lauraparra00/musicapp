@@ -8,6 +8,10 @@ export const Header = styled.div`
     justify-content:space-between;
     align-items: center; 
 
+    @media screen {max-width: 1370px;
+    
+}
+
 `;
 
 export const Logo = styled.div`
