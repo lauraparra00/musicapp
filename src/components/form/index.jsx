@@ -1,1 +1,1 @@
-
+export { Register } from "./Form";

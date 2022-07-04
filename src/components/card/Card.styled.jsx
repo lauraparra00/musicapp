@@ -2,19 +2,19 @@ import styled from "styled-components";
 
 
 export const CardContainer = styled.div`
-   color:rgb(91, 91, 100);
+   color:rgb(7, 7, 24);
    background-color: rgb(243, 234, 228);
    width: 250px;   
    border-radius: 8px;
    overflow: hidden;
-  border: #580ed0 5px none;
+  border: #9a90a7 5px none;
    
 `;
 
 export const ImageCard = styled.div`
     height: 250px;
     width: 250px;
-    background-color: green;
+    background-color: #caa9e6;
    
    
    
@@ -24,7 +24,7 @@ export const ImageCard = styled.div`
 
 export const CardText = styled.div`
    margin-bottom: 2%; 
-   color: #af1f7f;
+   color: #ce89b7;
    font-size: 16px;
    
 `;
@@ -50,9 +50,7 @@ export const ImageCardImage = styled.img`
 `;
 
 export const CardIcons = styled.div`
-   text-align: center;
-   width:  20%;
-   display: flex;
+  
 `;
 
 export const EditButton = styled.button`
@@ -82,4 +80,8 @@ export const EyeButton = styled.button`
     box-shadow: none;
     outline: none;
     cursor: pointer; 
+
+
+
+   
 `;

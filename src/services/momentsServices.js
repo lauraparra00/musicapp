@@ -15,7 +15,17 @@ export const momentsServices = {
 
         const deletedMoment = axios.delete(baseUrl + "/climbers/" + id).then((res)=>res.data);
         return deletedMoment;
-    }
+    },
 
+    createMoment (data) {
+
+        const createdMoment = axios.create(baseUrl + "/climbers/" + data).then((res)=>res.data);
+        return createdMoment;
+    },
+
+    getMomentById (id) {
+        const momentById = axios.get(baseUrl +"/climbers/" + id).then((res) => res.data);
+        return momentById;
+    }
 }
 

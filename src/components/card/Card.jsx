@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./card.css";
 import { CardContainer, CardIcons, CardText, DeleteButton, Description, EditButton, EyeButton, ImageCard, ImageCardImage, Title } from "./Card.styled";
 
-export function Card  ({moment, deleteMoment})  {
+export function Card  ({moment, deleteMoment, createMoment})  {
 
 
 
@@ -22,7 +22,7 @@ export function Card  ({moment, deleteMoment})  {
     <CardIcons>
         <EditButton> <i className="fa-solid fa-pen-to-square"></i></EditButton> 
         <DeleteButton onClick = { () =>deleteMoment(moment.id) }><i className="fa-solid fa-trash"></i></DeleteButton>
-        <EyeButton> <i className="fa-solid fa-eye"></i> </EyeButton>
+        <EyeButton onClick = { () =>createMoment(moment.data) }><i className="fa-solid fa-eye"></i></EyeButton>
     </CardIcons>
  {/*      <div className="image-card">
         <img

@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Header = styled.div`
     box-sizing: border-box;
-    background: #C4BEBE;
-    border: 1px solid #000000; 
+    background: #b38dac;
+    border: 1px solid #bba2b4; 
     display: flex;
     justify-content:space-between;
     align-items: center; 
@@ -18,7 +18,7 @@ export const Logo = styled.div`
     width: 20%;
     margin-left: 5%;
     align-items: center;
-  
+    
     `;
 export const Logoh1 = styled.h1`
     margin: 0;
@@ -28,13 +28,15 @@ export const Logoh1 = styled.h1`
 `;
 
 export const Nav = styled.div`
+    width: 33%;
     display: flex;
-    width: 80%;
-    justify-content: flex-end;
-
+    justify-content: space-around;
+    margin-right: 2rem;
+   
 `;
 
 export const NavButton = styled.button`
+    font-size: 16px;
     margin-right: 5%;
     padding: 2%;
     background: none;

@@ -1,9 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
+import { AppHeader } from './Form.styled';
 
 
 
 export const MyForm = () => {
+  
   const [name , setName] = useState('');
   const [email , setEmail] = useState('');
   const [password , setPassword] = useState('');
@@ -12,6 +14,7 @@ export const MyForm = () => {
  
   const handleChange =(e)=>{
     setName(e.target.value);
+    
   }
  
   const handleEmailChange =(e)=>{
@@ -41,13 +44,15 @@ export const MyForm = () => {
 
   }
 return (
-  <div className="App">
-  <header className="App-header">
+  <div>
+  <AppHeader> 
+ 
+ 
   <form onSubmit={(e) => {handleSubmit(e)}}>
 
   
-  <h3> Registrar-se </h3>
-      <label >
+  <h3> Register </h3>
+       <label >
         Nom:
       </label><br/>
       <input type="text" value={name} required onChange={function (e) { handleChange(e); }} /><br/>
@@ -69,8 +74,9 @@ return (
             
       <input type="submit" value="Submit"/>
     </form>
-  </header>
+    </AppHeader> 
   </div>
+ 
 );
 }
 
