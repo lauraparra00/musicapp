@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const App = styled.div`
-  text-align: center; 
+    text-align: center; 
 `;
 
 export const AppHeader = styled.div`
-  background-color: #d781f1;
+  background-color: blueviolet;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,9 @@ export const AppHeader = styled.div`
   color: #111010;
 `;
 
-export const Register = styled.h3`
-  
-
+export const ButtonSubmit = styled.button`
+  background-color: #ce89b7;
+    width: 60px;
+    height: 25px;
 `;
+

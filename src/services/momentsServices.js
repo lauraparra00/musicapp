@@ -19,7 +19,7 @@ export const momentsServices = {
 
     createMoment (data) {
 
-        const createdMoment = axios.create(baseUrl + "/climbers/" + data).then((res)=>res.data);
+        const createdMoment = axios.post(baseUrl + "/climbers/" , data).then((res)=>res.data);
         return createdMoment;
     },
 

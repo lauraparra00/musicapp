@@ -10,7 +10,8 @@ padding: 2em 0 2em 0;
   grid-row-gap: 2em;
   justify-content: space-evenly;
 
-@media screen {max-width: 1370px
-    
-}
+ @media only screen and (max-width: 500px){
+  grid-template-columns: 90%;
+  justify-content: center;
+} 
 `;

@@ -9,24 +9,33 @@ export const CardList = () => {
 
   useEffect(() => {
     getAllMoments();
-  }, []);
+  }, [moments]);
 
   const getAllMoments = () => {
     momentsServices.getAllMoments().then((res) => {
+      
       setMoments(res);
     });
   };
 
   const deleteMoment = (id) => {
-   
     momentsServices.deleteMoment(parseInt(id)).then((res) => {
-
-        if (res){
-            getAllMoments();
-        }
+      console.log (res)
+      setMoments([...moments, res])
     })
   };
 
+  
+
+  // const createMoment =(data) => {
+  //   momentsServices.createMoment(parseInt(data)).then((res) =>{
+       
+  //       if (res){
+  //         createMoment();
+  //       }
+
+  //   })
+  // }
   return (
     <ContainerList>
       {moments.map((moment, key) => (
