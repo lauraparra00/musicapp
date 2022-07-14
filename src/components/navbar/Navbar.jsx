@@ -8,7 +8,7 @@ export const Navbar = () => {
 
     <Header>
       <Logo>
-        <Logoh1>Logo</Logoh1>
+        <Logoh1>MomentS</Logoh1>
       </Logo>
     <Nav>
      

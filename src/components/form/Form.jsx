@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppHeader } from './Form.styled';
 
 
@@ -10,6 +11,9 @@ export const MyForm = () => {
   const [email , setEmail] = useState('');
   const [password , setPassword] = useState('');
   const [confPassword , setConfPassword] = useState('');
+  
+
+  const navigate = useNavigate();
 
  
   const handleChange =(e)=>{

@@ -59,7 +59,7 @@ export const Create = () => {
 
 
   return (
-    <div className = "divCreate">
+    <div>
     
         <AppHeader>
        
