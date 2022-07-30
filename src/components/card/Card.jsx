@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 
 import "./card.css";
 import { CardContainer, CardIcons, CardText, DeleteButton, Description, EditButton, EyeButton, ImageCard, ImageCardImage, Title } from "./Card.styled";
 
-export function Card  ({moment, deleteMoment})  {
-
-
+export function Card  ({deleteMoment,moment})  {
+  
 
  
   return (
@@ -22,7 +23,10 @@ export function Card  ({moment, deleteMoment})  {
     <CardIcons>
         <EditButton> <i className="fa-solid fa-pen-to-square"></i></EditButton> 
         <DeleteButton onClick = { () =>deleteMoment(moment.id) }><i className="fa-solid fa-trash"></i></DeleteButton>
-        <EyeButton><i className="fa-solid fa-eye"></i></EyeButton>
+        <Link to = {`/climbers/${moment.id}`}>
+
+        <EyeButton ><i className="fa-solid fa-eye"></i></EyeButton></Link>
+
     </CardIcons>
  {/*      <div className="image-card">
         <img

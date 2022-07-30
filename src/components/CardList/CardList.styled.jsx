@@ -10,8 +10,22 @@ padding: 2em 0 2em 0;
   grid-row-gap: 2em;
   justify-content: space-evenly;
 
- @media only screen and (max-width: 500px){
-  grid-template-columns: 90%;
-  justify-content: center;
-} 
+ 
+
+  @media screen and (max-width: 1085px) {
+    grid-template-columns: 30% 30% 30%;
+    justify-items: center;
+    /* height: 100vh; */
+  }
+  @media screen and (max-width: 820px) {
+    grid-template-columns: 45% 45%;
+    justify-items: center;
+    height: auto;
+  }
+  @media screen and (max-width: 490px) {
+    grid-template-columns: 90%;
+    justify-items: center;
+    height: auto;
+  }
+ 
 `;

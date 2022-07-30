@@ -25,7 +25,7 @@ export const CardList = () => {
     })
   };
 
-  
+ 
 
   // const createMoment =(data) => {
   //   momentsServices.createMoment(parseInt(data)).then((res) =>{
