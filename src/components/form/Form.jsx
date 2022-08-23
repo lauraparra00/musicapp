@@ -56,7 +56,7 @@ return (
 
   
   <h3> Register </h3>
-       <label >
+       <label>
         Nom:
       </label><br/>
       <input type="text" value={name} required onChange={function (e) { handleChange(e); }} /><br/>

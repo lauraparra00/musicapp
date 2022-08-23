@@ -1,34 +1,63 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import {
+  CardContainer,
+  CardIcons,
+  CardText,
+  DeleteButton,
+  Description,
+  EditButton,
+  EyeButton,
+  ImageCard,
+  ImageCardImage,
+  NumComment,
+  Title,
+  Avatar,
+  AvatarImg,
+  CommentButton,
+  CtUser,
+  TxtUser,
+  Anchor,
+} from "./Card.styled";
 
-
-import "./card.css";
-import { CardContainer, CardIcons, CardText, DeleteButton, Description, EditButton, EyeButton, ImageCard, ImageCardImage, Title } from "./Card.styled";
-
-export function Card  ({deleteMoment,moment})  {
-  
-
- 
+export function Card({ deleteMoment, moment }) {
   return (
-  
     <CardContainer>
-    <ImageCard>
-    <ImageCardImage src = {moment.url}/>
-    </ImageCard>
-    <CardText>
+      <ImageCard>
+        <ImageCardImage src={moment.url} />
+      </ImageCard>
+      <CardText>
         <Title> {moment.title}</Title>
         <Description> {moment.description}</Description>
-    </CardText>
-    <CardIcons>
-        <EditButton> <i className="fa-solid fa-pen-to-square"></i></EditButton> 
-        <DeleteButton onClick = { () =>deleteMoment(moment.id) }><i className="fa-solid fa-trash"></i></DeleteButton>
-        <Link to = {`/climbers/${moment.id}`}>
+      </CardText>
+      <CardIcons>
+        <Link to={`/form/${moment.id}`}>
+        <EditButton><i className="fa-solid fa-pen-to-square"></i></EditButton></Link>
+        <DeleteButton onClick={() => deleteMoment(moment.id)}><i className="fa-solid fa-trash"></i></DeleteButton>
+        <Link to={`/climbers/${moment.id}`}>
+        <EyeButton><i className="fa-solid fa-eye"></i></EyeButton>
+        </Link>
 
-        <EyeButton ><i className="fa-solid fa-eye"></i></EyeButton></Link>
+        <Anchor href={`/moment/${moment.id}`}>
+          <CommentButton>
+            <i className="fa-solid fa-comments"></i>
+          </CommentButton>
+        </Anchor>
+        <Avatar>
+          <AvatarImg
+            src={moment.photographer.avatar}
+            alt={moment.photographer.userName}
+          />
+        </Avatar>
 
-    </CardIcons>
- {/*      <div className="image-card">
+        <CtUser>
+          <TxtUser>{moment.photographer.userName}</TxtUser>
+        </CtUser>
+
+        <NumComment> {moment.commentsCount} </NumComment>
+      </CardIcons>
+      {/*      <div className="image-card">
         <img
           src="https://mail.google.com/mail/u/0?ui=2&ik=3ab806a510&attid=0.6&permmsgid=msg-a:r761211138147382019&th=1816703ebff7c718&view=att&disp=safe&realattid=18167000d0644b5ce1e5"
           alt="movie cover"
@@ -55,9 +84,7 @@ export function Card  ({deleteMoment,moment})  {
         </div>
         
       </div> */}
-   
     </CardContainer>
   );
 }
-
-
+export default Card;

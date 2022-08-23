@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Anchor = styled.a`
+  text-decoration: none;
+  color: #4c5a71;
+`;
 
 export const CardContainer = styled.div`
   color: rgb(7, 7, 24);
@@ -106,7 +110,67 @@ export const EyeButton = styled.button`
   justify-content: space-around;
   margin-right: 2rem;
   width: 18%;
+`;
 
+export const CommentButton = styled.button`
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  justify-content: space-around;
+  margin-right: 2rem;
+  width: 20%;
+`;
 
+export const NumComment = styled.text`
+  font-family: "Segoe UI";
+font-size: 1.25em;
+font-weight: 400;
+color: #bfcce1;
+@media screen and (max-width: 415px) {
+    font-size: 1.25rem;
+  }
 
 `;
+
+export const Avatar = styled.div`
+width: 2.5em;
+height: 2.5em;
+border-radius: 50%;
+border: none;
+position: absolute;
+bottom: 2.1em;
+left: 1.1em;
+z-index: 1;
+overflow: hidden;
+&:hover {
+  width: 3.5em;
+  height: 3.5em;
+  transition: all 0.2s ease-in-out;
+}
+`;
+
+export const AvatarImg = styled.img`
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+`;
+
+
+
+
+export const CtUser = styled.div`
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding-right: 2rem;
+padding-bottom: none;
+`;
+export const TxtUser = styled.h5`
+  display: flex;
+  justify-content: center;
+  text-shadow: 1px 1px 1px #bfcce1;
+  `;

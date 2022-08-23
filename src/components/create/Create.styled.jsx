@@ -20,5 +20,6 @@ export const ButtonSubmit = styled.button`
   background-color: #ce89b7;
     width: 60px;
     height: 25px;
+    
 `;
 

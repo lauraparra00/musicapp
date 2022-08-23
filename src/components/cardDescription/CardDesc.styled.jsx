@@ -31,7 +31,7 @@ export const CardMoment = styled.div`
   width: 30vw;
   margin-top: 5%;
   max-width: 400px;
-  overflow: hidden;
+  overflow: initial;
 
   @media screen and (max-width: 820px) {
     width: 80%;
@@ -78,7 +78,7 @@ export const CardText = styled.div`
     
 `;
 
-export const TextTitle = styled.h1`
+export const TextTitle = styled.h2`
   font-family: "Cinzel", serif;
   font-weight: 900;
   width: 100%;
@@ -92,8 +92,6 @@ export const TextTitle = styled.h1`
   
 `;
 
-
-
 export const TextDescription = styled.p`
   
   font-size: 1.2rem;
@@ -101,10 +99,41 @@ export const TextDescription = styled.p`
   text-align: justify;
 `;
 
-
 export const Text = styled.h4`
     line-height: 2em;
     font-weight: normal;
     line-break: anywhere;
 
+`;
+
+export const CtComments = styled.div`
+  /* border: solid 2px yellow; */
+  border-left: solid 4px #e773b1;
+  padding: 1em;
+  width: 20vw;
+  height: 70vh;
+  margin-top:5%;
+  @media screen and (max-width: 820px) {
+    width: 80%;
+    align-items: center;
+  }
+  @media screen and (max-width: 415px) {
+    width: 80%; 
+    align-items: center;
+    margin-top: none;
+    border-left: none;
+    border-top: solid 4px #f290cf;
+  }
+
+`;
+
+export const TextComments = styled.h4`
+    font-family: "Cinzel", serif;
+    padding-bottom: 1em;
+`;
+
+export const TxComments = styled.h5`
+   font-weight: normal;
+  padding-bottom: 5rem;
+  
 `;

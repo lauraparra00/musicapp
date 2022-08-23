@@ -15,12 +15,19 @@ export const Header = styled.div`
 
 export const Logo = styled.div`
   width: 20%;
-  margin-left: 5%;
+  margin-left: 3%;
   align-items: center;
+
+  
+  @media screen {
+    max-width: 1370px;
+  }
+  
+
 `;
 
-export const Logoh1 = styled.h1`
-  margin: 0;
+export const Logoh2 = styled.h2`
+  margin: 5;
   display: flex;
   color: #111218;
   
@@ -29,13 +36,13 @@ export const Logoh1 = styled.h1`
 export const Nav = styled.div`
   width: 33%;
   display: flex;
-  justify-content: space-around;
-  margin-right: 2rem;
+  justify-content: space-evenly;
+  margin-right: 5rem;
 `;
 
 export const NavButton = styled.button`
-  font-size: 16px;
-  margin-right: 5%;
+  font-size: 15px;
+  margin-right: 13px;
   padding: 2%;
   background: none;
   border: none;
@@ -45,5 +52,7 @@ export const NavButton = styled.button`
   color: white;}
   &:active {
   background-color: darkorange;
+
+  
   }
 `;

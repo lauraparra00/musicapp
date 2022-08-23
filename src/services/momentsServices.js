@@ -24,8 +24,16 @@ export const momentsServices = {
     },
 
     getMomentById (id) {
-        const momentById = axios.get(baseUrl +"/climbers/" + id).then((res) => res.data);
-        return momentById;
-    }
-}
+        const moment = axios.get(baseUrl +"/climbers/" + id).then((res) => res.data);
+        return moment;
+    },
 
+    updateMoment (id, newMoment) {
+        const updatedMoment = axios.put(baseUrl + id, "/climbers/" + newMoment.id).then((res) => res.data);
+        return updatedMoment;
+    },
+
+    getBySearch(search) {
+        const searched = axios.get(`${baseUrl}/climbers?search=${search}`).then((res) => res.data);
+        return searched;
+    }}

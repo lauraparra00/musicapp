@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerList = styled.div`
 
-padding: 2em 0 2em 0;
+padding: 5em 0 2em 0;
  
   background-color: #ebd1e7;
   display: grid;
@@ -28,4 +28,12 @@ padding: 2em 0 2em 0;
     height: auto;
   }
  
+
+`; 
+
+export const CtInput = styled.div`
+
+`;
+
+export const Label = styled.div`
 `;
